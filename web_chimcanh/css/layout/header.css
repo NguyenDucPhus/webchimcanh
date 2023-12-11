@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --red: rgb(201,0,0);
+}
+.wrapper{
+    position: relative;
+    max-width: 100%;
+}
+header{
+    position: relative;
+    max-width: 1080px;
+    margin: 0 auto;
+    height: 137px;
+}
+.header-wrapper{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.box-logo_mail{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 91px;
+}
+.flex-row{
+    height: 91px;
+    display: flex;
+    flex-flow: row nowrap;
+}
+.logo{
+    max-width: 25%;
+}
+.logo img{
+    width: 80%;
+}
+.box-logo_mail .phone-mail{
+    display: flex;
+    width: 75%;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+.phone, .mail{
+    display: flex;
+    align-items: center;
+}
+.icon{
+    width: 40px;
+    height: 40px;
+    border: 1px solid red;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: red;
+    font-size: 13px;
+    margin-right: 10px;
+}
+.phone .title, .mail .title{
+    font-family: 'Roboto', sans-serif;
+}
+.phone .title span, .mail .title span{
+    font-weight: bold;
+    font-size: 14px;
+    color: rgba(0,0,0,0.5);
+}
+.phone .title p{
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+    color: rgb(201,0,0);
+    font-size: 20px;
+}
+.mail .title p{
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+    color: rgb(201,0,0);
+    font-size: 14px; 
+}
+.box-menu{
+    position: relative;
+    max-width: 100%;
+    height: 46px;
+    background-color: rgb(201,0,0);
+}
+.menu-wrapper{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.menu-wrapper >ul{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    list-style: none;
+}
+.menu-wrapper >ul >li{
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    height: 100%;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.menu-wrapper >ul >li:hover{
+    background: rgb(229,229,229);
+}
+.menu-wrapper >ul >li:hover a{
+    color: #333;
+}
+/* .menu-wrapper >ul >li:first-child{
+    background: rgb(229,229,229);
+}
+.menu-wrapper> ul >li:first-child a{
+    color: #333;
+} */
+.menu-wrapper >ul >li >a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    color: #fff;
+}
+.menu-wrapper>ul >li >a i{
+    margin-left: 10px;
+    transform: rotate(90deg);
+    transition: 0.5s
+}
+.menu-wrapper ul li:hover a i{
+    transform: rotate(-90deg);
+}
+.menu-wrapper ul li .menu_con{
+    position: absolute;
+    background: #fff;
+    top: 46px;
+    margin-left: -20px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(40px);
+    z-index: 1000;
+    transition: all 0.25s;
+}
+.menu-wrapper ul li:nth-child(3):hover .menu_con{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0px);
+}
+.menu-wrapper ul li .menu_con ul{
+    padding: 20px 15px;
+    z-index: 10;
+    border: 2px solid rgb(229,229,229);
+}
+.menu_con ul::before{
+    position: absolute;
+    top: -10px;
+    z-index: 1;
+    content: '';
+    width: 0px;
+    height: 0px;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid rgb(255, 255, 255);
+}
+.menu-wrapper ul li .menu_con ul li{
+    list-style: none;
+    padding: 10px;
+    border-bottom: 1px solid rgb(184, 184, 184, 0.7);
+    transition: 0.5s;
+    width: 200px;
+}
+.menu-wrapper ul li .menu_con >ul >li:last-child{
+    border-bottom: none;
+}
+.menu_con ul li:hover{
+    background: rgb(229,229,229);
+}
+.menu_con ul li a{
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+}
